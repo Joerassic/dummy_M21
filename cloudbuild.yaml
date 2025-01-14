@@ -15,3 +15,6 @@ steps:
     'push',
     'europe-west1-docker.pkg.dev/dtumlops-447712/joe-container-registry/joecloud-image1'
   ]
+options:
+  logging: CLOUD_LOGGING_ONLY  # Log only to Cloud Logging (optional)
+  logs_bucket: "gs://joe-bucket-mlops"  # Optional: specify a custom log bucket
