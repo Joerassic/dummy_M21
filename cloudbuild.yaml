@@ -1,5 +1,5 @@
 options:
-  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
+  default_logs_bucket_behavior: joe_bucket_mlops 
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   id: 'Build container image'
