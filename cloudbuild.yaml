@@ -15,5 +15,18 @@ steps:
     'push',
     'europe-west1-docker.pkg.dev/dtumlops-447712/joe-container-registry/joecloud-image1'
   ]
+- name: 'gcr.io/cloud-builders/gcloud'
+  id: 'Deploy to Cloud Run'
+  args: [
+    'run',
+    'deploy',
+    'joe-service-please-work',
+    '--image',
+    'europe-west1-docker.pkg.dev/dtumlops-447712/gcf-artifacts/gcp_test_app',
+    '--region',
+    'europe-west1',
+    '--platform',
+    'managed',
+  ]
 options:
   logging: CLOUD_LOGGING_ONLY  # Log only to Cloud Logging (optional)
